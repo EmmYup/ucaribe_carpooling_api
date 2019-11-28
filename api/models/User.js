@@ -24,6 +24,7 @@ module.exports = {
         },
         phone: {
             type: 'number',
+            required: true,
         },
         carreer: {
             type: 'string',
@@ -31,6 +32,17 @@ module.exports = {
         type: {
             type: 'string',
             enum: ['student', 'driver'],
+        },
+        meetingPoint: {
+            type: 'string',
+            enum: [
+                'biblioteca',
+                'edificio de ingenierías',
+                'edificio A',
+                'edificio B',
+                'edificio C',
+                'edificio E',
+            ],
         },
         file: {
             model: 'UploadedFile',
