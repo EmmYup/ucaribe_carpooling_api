@@ -44,6 +44,17 @@ module.exports = {
                 'edificio E',
             ],
         },
+        destination: {
+            type: 'string',
+        },
+        addresses: {
+            collection: 'Address',
+            via: 'user',
+        },
+        routes: {
+            collection: 'Route',
+            via: 'user',
+        },
         file: {
             model: 'UploadedFile',
         },
