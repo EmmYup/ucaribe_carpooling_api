@@ -33,10 +33,10 @@ module.exports = {
             enum: ['student', 'driver'],
         },
         file: {
-            model: 'file',
+            model: 'UploadedFile',
         },
         vehicle: {
-            model: 'vehicle',
+            model: 'Vehicle',
         },
     },
 };
