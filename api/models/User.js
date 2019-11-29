@@ -44,6 +44,10 @@ module.exports = {
                 'edificio E',
             ],
         },
+        meetingTime: {
+            type: 'string',
+            columnType: 'datetime',
+        },
         destination: {
             type: 'string',
         },
