@@ -9,6 +9,9 @@
  */
 
 module.exports.routes = {
+    'get /': 'AppController.index',
 
+    'post /user/:type': 'UserController.create',
 
+    'post /login': 'SessionController.login',
 };
