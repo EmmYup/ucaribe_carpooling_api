@@ -5,14 +5,14 @@ module.exports = {
 
     inputs: {
         params: {
-            type: 'object',
-            example: "{name: 'user.name', phone: 99999}",
+            type: {},
+            example: { name: 'user.name', phone: 99999 },
             description: 'object with possible params',
             required: true,
         },
         keys: {
-            type: 'array',
-            example: "['name', 'lasteName', 'phone']",
+            type: ['ref'],
+            example: ['name', 'lasteName', 'phone'],
             description: 'array with names of model attributes',
             required: true,
         },

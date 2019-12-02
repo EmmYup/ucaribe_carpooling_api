@@ -6,6 +6,7 @@
     "keywords": [],
     "dependencies": {
         "@sailshq/lodash": "^3.10.3",
+        "bcrypt": "^3.0.7",
         "cross-env": "^6.0.3",
         "dotenv": "^8.2.0",
         "jsonwebtoken": "^8.5.1",
@@ -13,10 +14,12 @@
         "prettier": "^1.19.1",
         "sails": "^1.1.0",
         "sails-hook-orm": "^2.1.1",
-        "sails-hook-sockets": "^1.5.5"
+        "sails-hook-sockets": "^1.5.5",
+        "sails-mongo": "^1.0.1"
     },
     "devDependencies": {
         "@sailshq/eslint": "^4.19.3",
+        "chai": "^4.2.0",
         "eslint": "^6.7.1",
         "eslint-config-airbnb-base": "^14.0.0",
         "eslint-config-prettier": "^6.7.0",
@@ -29,7 +32,7 @@
     },
     "scripts": {
         "start": "cross-env NODE_ENV=production node app.js",
-        "test": "node ./node_modules/mocha/bin/mocha test/lifecycle.test.js test/integration/**/*.test.js",
+        "test": "cross-env NODE_ENV='test' mocha",
         "lint": "eslint . --max-warnings=0 --report-unused-disable-directives && echo '✔  Your .js files look good.'",
         "custom-tests": "echo \"(No other custom tests yet.)\" && echo"
     },

@@ -10,5 +10,8 @@ module.exports = {
         name: {
             type: 'string',
         },
+        user: {
+            model: 'User',
+        },
     },
 };

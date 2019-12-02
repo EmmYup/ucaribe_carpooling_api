@@ -16,5 +16,8 @@ module.exports = {
         route: {
             model: 'Route',
         },
+        user: {
+            model: 'User',
+        },
     },
 };
