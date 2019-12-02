@@ -25,7 +25,7 @@ module.exports = {
         },
     },
 
-    fn: async function(params, keys, exits) {
+    fn: async function({ params, keys }, exits) {
         for (let i = 0; i < keys.length; i++) {
             if (!params[keys[i]]) {
                 delete params[keys[i]];

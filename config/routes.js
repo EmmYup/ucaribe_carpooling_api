@@ -18,4 +18,9 @@ module.exports.routes = {
     'post /vehicle/:userId': 'VehicleController.create',
     'get /vehicle/:id': 'VehicleController.show.',
     'put /vehicle/:id': 'VehicleController.update',
+
+    'post /address/:userId': 'AddressController.create',
+    'get /address/:userId': 'AddressController.index',
+    'put /address/:id': 'AddressController.update',
+    'deleted /address/:id': 'AddressController.remove',
 };
