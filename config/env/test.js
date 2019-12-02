@@ -45,7 +45,9 @@ module.exports = {
          ***************************************************************************/
         default: {
             adapter: 'sails-mongo',
-            url: process.env.MONGOBD_URL,
+            host: 'localhost',
+            port: 27017,
+            database: process.env.LOCAL_MONGO,
         },
     },
 
@@ -60,7 +62,7 @@ module.exports = {
          * https://sailsjs.com/docs/concepts/models-and-orm/model-settings#?migrate *
          *                                                                          *
          ***************************************************************************/
-        migrate: 'safe',
+        migrate: 'drop',
 
         /***************************************************************************
          *                                                                          *
@@ -204,6 +206,7 @@ module.exports = {
          * > Be sure to use the right protocol!  ("http://" vs. "https://")         *
          *                                                                          *
          ***************************************************************************/
+        // TODO: ADD ORIGINS
         // onlyAllowOrigins: [
         //   'https://example.com',
         //   'https://staging.example.com',
@@ -241,7 +244,7 @@ module.exports = {
      *                                                                         *
      ***************************************************************************/
     log: {
-        level: 'silly',
+        level: 'warn',
     },
 
     http: {
@@ -310,8 +313,8 @@ module.exports = {
      *                                                                         *
      ***************************************************************************/
     custom: {
-        //baseUrl: 'https://example.com',
-        //internalEmailAddress: 'support@example.com',
+        // baseUrl: 'https://example.com',
+        // internalEmailAddress: 'support@example.com',
         // mailgunDomain: 'mg.example.com',
         // mailgunSecret: 'key-prod_fake_bd32301385130a0bafe030c',
         // stripeSecret: 'sk_prod__fake_Nfgh82401348jaDa3lkZ0d9Hm',
