@@ -9,7 +9,7 @@ const index = async (req, res) => {
     try {
         const id = req.param('userId');
         const { addresses } = await User.findOne({ id }).populate('addresses');
-        res.success(addresses);
+        res.ok(addresses);
     } catch (er) {
         const { err: e, status } = er;
         res.handle({ err: e, status });
@@ -19,7 +19,7 @@ const index = async (req, res) => {
 const create = async (req, res) => {
     try {
         const id = req.param('userId');
-        const { name, main = true } = req.allParams();
+        const { name, main } = req.allParams();
         const { addressId } = await Address.create({ name, main }).fetch();
         await User.addToCollection({ id }, 'addresses').members([addressId]);
         const createdAddress = await Address.findOne({ id: addressId });
@@ -35,7 +35,7 @@ const update = async (req, res) => {
         const id = req.param('id');
         const { name, main } = req.allParams();
         const paramsNamesArr = ['name', 'main'];
-        const params = sails.helpers.filterParams.with({
+        const params = await sails.helpers.filterParams.with({
             params: { name, main },
             keys: paramsNamesArr,
         });

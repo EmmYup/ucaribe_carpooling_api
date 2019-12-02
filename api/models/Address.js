@@ -12,6 +12,7 @@ module.exports = {
         },
         main: {
             type: 'boolean',
+            defaultsTo: false,
         },
         route: {
             model: 'Route',

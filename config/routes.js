@@ -22,5 +22,5 @@ module.exports.routes = {
     'post /address/:userId': 'AddressController.create',
     'get /address/:userId': 'AddressController.index',
     'put /address/:id': 'AddressController.update',
-    'deleted /address/:id': 'AddressController.remove',
+    'delete /address/:id': 'AddressController.remove',
 };
