@@ -40,7 +40,7 @@ const update = async (req, res) => {
         const id = req.param('id');
         const { licensePlate, model, color, user } = req.allParams();
         const paramsNamesArr = ['licensePlate', 'model', 'color', 'user'];
-        const params = await sails.helpers.filterParams(
+        const params = await sails.helpers.filterParams.with(
             { licensePlate, model, color, user },
             paramsNamesArr
         );
