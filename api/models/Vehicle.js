@@ -18,6 +18,9 @@ module.exports = {
         color: {
             type: 'string',
         },
+        user: {
+            model: 'User',
+        },
         file: {
             model: 'UploadedFile',
         },

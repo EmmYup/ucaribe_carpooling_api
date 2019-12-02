@@ -14,4 +14,8 @@ module.exports.routes = {
     'post /user/:type': 'UserController.create',
 
     'post /login': 'SessionController.login',
+
+    'post /vehicle/:userId': 'VehicleController.create',
+    'get /vehicle/:id': 'VehicleController.show.',
+    'put /vehicle/:id': 'VehicleController.update',
 };
