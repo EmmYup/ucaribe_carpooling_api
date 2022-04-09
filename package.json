@@ -10,7 +10,7 @@
         "cross-env": "^6.0.3",
         "dotenv": "^8.2.0",
         "jsonwebtoken": "^8.5.1",
-        "moment": "^2.24.0",
+        "moment": "^2.29.2",
         "prettier": "^1.19.1",
         "sails": "^1.1.0",
         "sails-hook-orm": "^2.1.1",
